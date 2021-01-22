@@ -1,0 +1,34 @@
+/* taustan väri */
+.navbar-custom {
+    background-color: #F7F4E4 ;
+    font-family: Merriweather;
+}
+
+/* alasvetovalikon taustan väri */
+.dropdown-menu {
+    background-color: #FCFAF3;
+}
+
+
+/* brandin ja tekstin väri */
+.navbar-custom .navbar-brand, .navbar-custom .navbar-text {
+    color: #022D5F;
+    background-color: #F7F4E4;
+    font-family: Merriweather;
+    font-weight: 700;
+}
+
+/* linkin väri */
+.navbar-custom .navbar-nav .nav-link {
+    color: #FC7B6D;
+}
+
+/* aktiivisen & hover-linkin väri */
+.navbar-custom .nav-item.active .nav-link, .navbar-custom .nav-item:hover .nav-link {
+    color: #B41919;
+    font-family: Merriweather;
+}
+
+.custom-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#022D5F' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+    }
