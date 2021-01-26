@@ -2,105 +2,126 @@
 <html lang="en">
 
 <head>
-    <title>Ristorante Strobilo</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="ravintolatyyli.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather"> 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<title>Ristorante Strobilo</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="ravintolatyyli.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 
 <body>
 
-    <nav class="navbar navbar-expand-md navbar-custom fixed-top">
-        <a class="navbar-brand" href="#">
-          <img src="img/pinecone.jpg" alt="logo" style="width:30px;">
-          Ristorante Estrobilo</a>
-        <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="#">Etusivu</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Ravintola</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Menu
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">À la carte</a>
-                <a class="dropdown-item" href="#">Lounas</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Viinit</a>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Yhteystiedot</a>
-            </li>
-          </ul>
-        </div>
-        
-      </nav>
+	<!-- Navbar -->
+	<nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+		<a class="navbar-brand" href="#">
+			<img src="img/pinecone.jpg" alt="käpylogo">
+			Ristorante Strobilo</a>
+		<button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse"
+			data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+			aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
 
-      <div id="demo" class="carousel slide" data-ride="carousel" data-interval="4000" data-pause="hover">
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="#">Etusivu</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#ravintola">Ravintola</a>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+						data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Menu
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="#">À la carte</a>
+						<a class="dropdown-item" href="#">Lounas</a>
+						<a class="dropdown-item" href="#">Catering</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="#">Oluet</a>
+						<a class="dropdown-item" href="#">Viinit</a>
+						<a class="dropdown-item" href="#">Drinkit</a>
+					</div>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Yhteystiedot</a>
+				</li>
+			</ul>
+		</div>
 
-        <!-- Indicators -->
-        <ul class="carousel-indicators">
-          <li data-target="#demo" data-slide-to="0" class="active"></li>
-          <li data-target="#demo" data-slide-to="1"></li>
-          <li data-target="#demo" data-slide-to="2"></li>
-          <li data-target="#demo" data-slide-to="3"></li>
-        </ul>
-      
-        <!-- The slideshow -->
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="img/pasta_alfredo.jpeg" alt="Pasta Alfredo">
-            <div class="carousel-caption">
-              <h2>Pasta Alfredo</h2>
-              <p>Klassikkopasta yksinkertaisista aineksista</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="img/chickenparmsandwich.jpeg" alt="Chicken Parm Sandwich">
-            <div class="carousel-caption">
-              <h2>Chicken Parm Sandwich</h2>
-              <p>Herkullinen annos, joka pienentää myös hävikkiä</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="img/matileipa.jpeg" alt="Mätileipä">
-            <div class="carousel-caption">
-              <h2>Mätileipä muikun mädillä</h2>
-              <p>Sesongin klassikot parhaista aineksista</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="img/salamipizza.jpeg" alt="Salamipizza">
-            <div class="carousel-caption">
-              <h2>Salamipizza</h2>
-              <p>Ohutpohjaiset pizzat uunissa tai grillissä paistettuna</p>
-            </div>
-          </div>
-        </div>
-      
-        <!-- Left and right controls -->
-        <a class="carousel-control-prev" href="#demo" data-slide="prev">
-          <span class="carousel-control-prev-icon"></span>
-        </a>
-        <a class="carousel-control-next" href="#demo" data-slide="next">
-          <span class="carousel-control-next-icon"></span>
-        </a>
-      
-      </div>
+	</nav>
+
+	<div id="annos" class="carousel slide" data-ride="carousel" data-interval="4000" data-pause="hover">
+
+		<!-- Indicators -->
+		<ul class="carousel-indicators">
+			<li data-target="#annos" data-slide-to="0" class="active"></li>
+			<li data-target="#annos" data-slide-to="1"></li>
+			<li data-target="#annos" data-slide-to="2"></li>
+			<li data-target="#annos" data-slide-to="3"></li>
+		</ul>
+
+		<!-- The slideshow -->
+		<div class="carousel-inner">
+			<div class="carousel-item active">
+				<img src="img/pasta_alfredo.jpeg" alt="Pasta Alfredo">
+				<div class="carousel-caption">
+					<h3>Pasta Alfredo</h3>
+					<p>Klassikkopasta yksinkertaisista aineksista</p>
+				</div>
+			</div>
+			<div class="carousel-item">
+				<img src="img/chickenparmsandwich.jpeg" alt="Chicken Parm Sandwich">
+				<div class="carousel-caption">
+					<h3>Chicken Parm Sandwich</h3>
+					<p>Herkullinen annos, joka pienentää myös hävikkiä</p>
+				</div>
+			</div>
+			<div class="carousel-item">
+				<img src="img/matileipa.jpeg" alt="Mätileipä">
+				<div class="carousel-caption">
+					<h3>Mätileipä muikun mädillä</h3>
+					<p>Sesongin klassikot parhaista aineksista</p>
+				</div>
+			</div>
+			<div class="carousel-item">
+				<img src="img/salamipizza.jpeg" alt="Salamipizza">
+				<div class="carousel-caption">
+					<h3>Salamipizza</h3>
+					<p>Ohutpohjaiset pizzat suoraan uunista tai grillistä</p>
+				</div>
+			</div>
+		</div>
+
+		<!-- Left and right controls -->
+		<a class="carousel-control-prev" href="#annos" data-slide="prev">
+			<span class="carousel-control-prev-icon"></span>
+		</a>
+		<a class="carousel-control-next" href="#annos" data-slide="next">
+			<span class="carousel-control-next-icon"></span>
+		</a>
+
+	</div>
+
+	<!-- Grid -->
+	<div class="container" id="ravintola">
+		<div class="row">
+			<div class="col-lg-4"><img src="img/synttaripoyta.jpeg" alt="synttäripöytä"></div>
+			<div class="col-lg-4 infolaatikko">
+				<h1>Ristorante Strobilo</h1>
+				<p>Kodikas kortteliravintola Käpylän sydämessä kutsuu sinut herkuttelemaan! <br>Olemme erikoistuneet
+					pohjoismaiseen ja välimerelliseen keittiöön.</p>
+				<p>Auki sopimuksen mukaan sekä <br>juhlapyhinä ja merkkipäivinä, tervetuloa!</p>
+			</div>
+			<div class="col-lg-4"><img src="img/joulupoyta.jpeg" alt="joulupöytä"></div>
+		</div>
+	</div>
 
 </body>
 

@@ -1,19 +1,28 @@
-/* taustan väri */
-.navbar-custom {
-    background-color: #F7F4E4 ;
-    font-family: Merriweather;
-}
-
-/* alasvetovalikon taustan väri */
-.dropdown-menu {
+body {
     background-color: #FCFAF3;
 }
 
+/* logo */
+.navbar-brand img {
+    width: 45px;
+    border-radius: 50%;
+}
 
-/* brandin ja tekstin väri */
+/* valikon taustan väri */
+.navbar-custom {
+    background-color: #FCFAF3;
+    font-family: Merriweather;
+}
+
+/* alasvetovalikko */
+.dropdown-menu {
+    background-color: #FCFAF3;
+    color: #022D5F;
+}
+
+/* brandin ja valikon teksti */
 .navbar-custom .navbar-brand, .navbar-custom .navbar-text {
     color: #022D5F;
-    background-color: #F7F4E4;
     font-family: Merriweather;
     font-weight: 700;
 }
@@ -23,7 +32,7 @@
     color: #FC7B6D;
 }
 
-/* aktiivisen & hover-linkin väri */
+/* aktiivinen & hover-linkki */
 .navbar-custom .nav-item.active .nav-link, .navbar-custom .nav-item:hover .nav-link {
     color: #B41919;
     font-family: Merriweather;
@@ -34,18 +43,23 @@
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#022D5F' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 
+/* pudotusvalikko */
+.nav-item .dropdown-menu a:hover { 
+    color: white !important;
+    background: #FC7B6D !important;
+    cursor: pointer;
+}
+
 /* karuselli */
 .carousel {
-    width: 100%;
-    margin: auto;
-    display: block;
+    padding: 59px 0px 0px 0px;
 }
 
 /* karusellin kuvat */
 .carousel-inner img {
-    width: 75%;
+    width: 100%;
     margin: auto;
-    display: block;
+    max-height: 1000px;
 }
 
 /* karuselli kapealla näytöllä */
@@ -55,10 +69,34 @@
     } 
 }
 
+/* karusellin nuolten värit */
 .carousel-control-prev-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23022D5F' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5- 1.5z'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23FC7B6D' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5- 1.5z'/%3E%3C/svg%3E");
 }
 
 .carousel-control-next-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23022D5F' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4- 4z'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23FC7B6D' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4- 4z'/%3E%3C/svg%3E");
+}
+
+/* grid */
+#ravintola {
+    width: 100%;
+    padding: 30px 0px 50px 0px;
+    text-align: center;
+}
+
+/* gridin kuvat */
+#ravintola img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 20% 0px;
+}
+
+/* gridin infolaatikko */
+.infolaatikko {
+    background-color: #FFFFFF;
+    border-style: dashed; 
+    border-color: #FC7B6D;
+    color: #022D5F;
+    padding: 10px;
 }
