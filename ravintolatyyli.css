@@ -132,8 +132,8 @@ body {
 /*videot*/
 #videot {
     width: 100%;
-    max-width: 800px;
-    margin-top: 100px;
+    max-width: 600px;
+    margin-top: 20px;
 }
 
 #videot .nav-link.active {
@@ -144,4 +144,8 @@ body {
 #videot .nav-link {
     color:#FC7B6D;
     background-color: #022D5F;
+}
+
+.tab-content {
+    margin: 20px;
 }
