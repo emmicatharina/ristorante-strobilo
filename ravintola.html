@@ -17,7 +17,7 @@
 
 	<!-- Navbar -->
 	<nav class="navbar navbar-expand-lg navbar-custom fixed-top">
-		<a class="navbar-brand" href="#alku">
+		<a class="navbar-brand" href="#etusivu">
 			<img src="img/pinecone.jpg" alt="käpylogo">
 			Ristorante Strobilo</a>
 		<button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse"
@@ -29,7 +29,7 @@
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav mr-auto">
 				<li class="nav-item">
-					<a class="nav-link" href="#">Etusivu</a>
+					<a class="nav-link" href="#etusivu">Etusivu</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="#ravintola">Ravintola</a>
@@ -40,17 +40,20 @@
 						Menu
 					</a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<a class="dropdown-item" href="#">À la carte</a>
-						<a class="dropdown-item" href="#">Lounas</a>
-						<a class="dropdown-item" href="#">Catering</a>
+						<a class="dropdown-item" href="#menu">Pastat</a>
+						<a class="dropdown-item" href="#menu">Pizzat</a>
+						<a class="dropdown-item" href="#menu">Jälkiruuat</a>
 						<div class="dropdown-divider"></div>
-						<a class="dropdown-item" href="#">Oluet</a>
-						<a class="dropdown-item" href="#">Viinit</a>
-						<a class="dropdown-item" href="#">Drinkit</a>
+						<a class="dropdown-item" href="#juomat">Puna-, valko- ja roseviinit</a>
+						<a class="dropdown-item" href="#juomat">Kuohuviinit</a>
+						<a class="dropdown-item" href="#juomat">Drinkit</a>
 					</div>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">Yhteystiedot</a>
+					<a class="nav-link" href="#videot">Videot</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#yhteystiedot">Yhteystiedot</a>
 				</li>
 			</ul>
 		</div>
@@ -68,7 +71,7 @@
 		</ul>
 
 		<!-- The slideshow -->
-		<div class="carousel-inner">
+		<div class="carousel-inner" id="etusivu">
 			<div class="carousel-item active">
 				<img src="img/pasta_alfredo.jpeg" alt="Pasta Alfredo">
 				<div class="carousel-caption">
@@ -127,7 +130,7 @@
 	<div class="card-group mx-auto">
 		<div class="card">
 			<img src="img/linguine_alle_vongole.jpeg" class="card-img-top" alt="Linguine alle vongole">
-			<div class="card-body">
+			<div class="card-body" id="menu">
 				<h5 class="card-title">Pastat</h5>
 				<p class="card-text">Hyvistä raaka-aineista tehty pasta on olennainen osa italialaista keittiötä.
 					Yksinkertaiset ja herkulliset raaka-aineet kruunavat täydellisen pastan.</p>
@@ -135,7 +138,7 @@
 		</div>
 		<div class="card">
 			<img src="img/sienipizza.jpeg" class="card-img-top" alt="Sienipizza grillissä">
-			<div class="card-body">
+			<div class="card-body" id="menu">
 				<h5 class="card-title">Pizzat</h5>
 				<p class="card-text">Strobilon pizzojen salaisuus on taikinan pitkä nostatusaika ja sen ohueksi
 					kauliminen.
@@ -145,7 +148,7 @@
 		</div>
 		<div class="card">
 			<img src="img/macaronskakku.jpeg" class="card-img-top" alt="Macaronskakku">
-			<div class="card-body">
+			<div class="card-body" id="menu">
 				<h5 class="card-title">Jälkiruuat</h5>
 				<p class="card-text">Aterian päätteksi iso tai pieni makea on aina kohdallaan. Sesongin marjat
 					näyttelevät pääroolia useimmissa jälkiruuissamme.
@@ -164,8 +167,8 @@
 	</div>
 
 	<!-- Accordion -->
-	<div id="accordion">
-		<div class="card">
+	<div class="mx-auto" id="accordion">
+		<div class="card" id="juomat">
 			<div class="card-header">
 				<a class="card-link" data-toggle="collapse" href="#collapseOne">
 					Puna-, valko- ja roseviinit
@@ -174,7 +177,7 @@
 			<div id="collapseOne" class="collapse" data-parent="#accordion">
 				<div class="card-body">
 					<div class="row">
-						<div class="col">
+						<div class="col" id="viinit">
 							<img src="img/valpolicella_ripasso.jpeg" class="card-img-top" alt="Valpolicella Ripasso">
 						</div>
 						<div class="col">
@@ -205,7 +208,7 @@
 						</div>
 						<div class="col">
 							<p> Kuohuviinit ovat Alkon valikoimista lukuun ottamatta muutamia poikkeuksia.
-								Edullisemmista
+								<br><br>Edullisemmista
 								vaihtoehdoista löytyy sekä proseccoa että cavaa. Shampanjaa löytyy myös, useammassa
 								hintaluokassa.
 
@@ -233,9 +236,9 @@
 						<div class="col">
 							<p> Aterian aluksi voit nauttia drinkin ruokia odotellessa. Valikoimassa on myös
 								digestiivejä aterian
-								päättämään. Kysy rohkeasti suosituksia, baarimestarimme loihtii mielellään sopivan
-								drinkin
-								haluamasi makumaailman ympärille.
+								päättämään.<br><br> Kysy rohkeasti suosituksia, baarimestarimme loihtii mielellään
+								sopivan
+								drinkin haluamasi makumaailman ympärille.
 							</p>
 						</div>
 						<div class="col">
@@ -248,7 +251,7 @@
 	</div>
 
 	<!-- Nav tabs -->
-	<ul class="nav nav-tabs" id="videot">
+	<ul class="nav nav-tabsd-flex justify-content-center" id="videot">
 		<li class="nav-item">
 			<a class="nav-link active" data-toggle="tab" href="#video1">Video 1</a>
 		</li>
@@ -280,6 +283,39 @@
 				<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/L1GnSx58VpM"></iframe>
 			</div>
 		</div>
+	</div>
+
+	<div class="table-responsive d-flex justify-content-center" id="yhteystiedot">
+		<table class="table table-striped table-bordered">
+			<thead>
+				<tr>
+					<th>Nimi</th>
+					<th>Tehtävä</th>
+					<th>Sähköposti</th>
+					<th>Puhelin</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Catharina Nyberg</td>
+					<td>Hovimestari</td>
+					<td>catharina.nyberg@strobilo.fi</td>
+					<td>050 793 7501</td>
+				</tr>
+				<tr>
+					<td>Carina Hyvönen</td>
+					<td>Ravintolapäällikkö</td>
+					<td>carina.hyvonen@strobilo.fi</td>
+					<td>050 536 5013</td>
+				</tr>
+				<tr>
+					<td>Voitto Makkonen</td>
+					<td>Sommelier</td>
+					<td>voitto.makkonen@strobilo.fi</td>
+					<td>050 407 2749</td>
+				</tr>
+			</tbody>
+		</table>
 	</div>
 </body>
 
