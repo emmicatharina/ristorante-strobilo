@@ -113,3 +113,18 @@ body {
     display: flex;
     padding: 20px;
 }
+
+/* accordion */
+#accordion {
+    width: 95%; 
+}
+
+/* accordionin kuva */
+.card-body img {
+    max-width: 500px;
+}
+
+/* accordionin otsikot */
+.card-link {
+    color: #022D5F !important;
+}
