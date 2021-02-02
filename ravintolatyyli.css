@@ -128,3 +128,20 @@ body {
 .card-link {
     color: #022D5F !important;
 }
+
+/*videot*/
+#videot {
+    width: 100%;
+    max-width: 800px;
+    margin-top: 100px;
+}
+
+#videot .nav-link.active {
+    color:#022D5F;
+    background-color: #FC7B6D;
+}
+
+#videot .nav-link {
+    color:#FC7B6D;
+    background-color: #022D5F;
+}
