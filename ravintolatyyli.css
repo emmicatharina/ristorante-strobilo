@@ -1,5 +1,6 @@
 body {
     background-color: #FCFAF3;
+    position: relative;
 }
 
 /* logo */
@@ -12,6 +13,11 @@ body {
 .navbar-custom {
     background-color: #FCFAF3;
     font-family: Merriweather;
+}
+
+/* aktiivinen sivun osio valikossa */
+.nav-link.active {
+    color: #0F6BD0 !important;
 }
 
 /* alasvetovalikko */
@@ -34,7 +40,7 @@ body {
 
 /* aktiivinen & hover-linkki */
 .navbar-custom .nav-item.active .nav-link, .navbar-custom .nav-item:hover .nav-link {
-    color: #B41919;
+    color: #EE4437;
     font-family: Merriweather;
 }
 
