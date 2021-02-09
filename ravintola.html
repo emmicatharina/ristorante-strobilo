@@ -285,6 +285,7 @@
 		</div>
 	</div>
 
+	<!-- Table -->
 	<div class="table-responsive d-flex justify-content-center" id="yhteystiedot">
 		<table class="table table-striped table-bordered">
 			<thead>
@@ -317,6 +318,133 @@
 			</tbody>
 		</table>
 	</div>
+
+	<!-- Lomake -->
+	<div class="container d-flex justify-content-center" id="varaus">
+		<form onsubmit="return false">
+			<fieldset>
+				<h2>Pöytävaraus</h2>
+				<label for="nimi" class="kuvaus">Nimi:
+					<input type="text" id="nimi" placeholder="Jotta tiedämme, kenet toivotamme tervetulleeksi" required>
+				</label>
+
+				<label for="sposti" class="kuvaus">Sähköposti:
+					<input type="email" id="sposti" placeholder="Jotta voimme lähettää varausvahvistuksen" required>
+				</label>
+
+				<label for="puhelin" class="kuvaus">Puhelin:
+					<input type="tel" id="puhelin" placeholder="Jotta voimme ottaa pikaisesti yhteyttä"
+						pattern="\+?[0-9 () \-]+">
+				</label>
+
+				<label for="maara" class="kuvaus">Ruokailijoiden määrä:
+					<input type="number" id="maara" name="maara" min="1" max="6" placeholder="1–6">
+				</label>
+
+				<label for="pvm" class="kuvaus">Päivämäärä:
+					<input type="date" id="pvm" name="pvm" placeholder="pp.kk.vvvv">
+				</label>
+
+				<label for="juhla" class="kuvaus">Mikä on juhlan aihe?
+					<select id="juhla">
+						<option>Ei mikään</option>
+						<option>Syntymäpäivä</option>
+						<option>Nimipäivä</option>
+						<option>Hääpäivä</option>
+						<option>Valmistujaiset</option>
+						<option>Rippijuhla</option>
+						<option>Muistotilaisuus</option>
+						<option>Juhlapyhä</option>
+					</select>
+				</label>
+
+				<label class="kuvaus">Kattaus:</label>
+				<label>
+					<input type="radio" name="kattaus" value="16-18"> 16.00–18.00
+				</label>
+				<label>
+					<input type="radio" name="kattaus" value="18-20"> 18.00–20.00
+				</label>
+				<label>
+					<input type="radio" name="kattaus" value="20-22"> 20.00–22.00
+				</label>
+				<label>
+					<input type="radio" name="kattaus" value="22-00"> 22.00–00.00
+				</label>
+
+				<label class="kuvaus">Lisätoiveet:</label>
+				<label>
+					<input type="checkbox" name="toive" value="takkatuli"> takkatuli
+				</label>
+				<label>
+					<input type="checkbox" name="toive" value="elävää musiikkia"> elävää musiikkia
+				</label>
+				<label>
+					<input type="checkbox" name="toive" value="naamioitunut henkilökunta"> naamioitunut henkilökunta
+				</label>
+				<label>
+					<input type="checkbox" name="toive" value="pöytä ulkona"> pöytä ulkona
+				</label>
+
+				<label class="kuvaus">Lisätietoja:</label>
+				<textarea id="lisatiedot" placeholder="Kirjoita mahdolliset varaukseen liittyvät lisätiedot tähän."
+					rows="4" col="50"></textarea>
+				<br>
+				<div class="d-flex justify-content-center">
+					<input type="submit" value="Lähetä" onclick="varaus()">
+					<input type="reset" value="Tyhjennä">
+				</div>
+				<div id="tiedot"></div>
+			</fieldset>
+		</form>
+	</div>
+
+	<script>
+		function varaus() {
+			var nimitieto = document.getElementById("nimi").value;
+			var spostiosoite = document.getElementById("sposti").value;
+			var puhelin = document.getElementById("puhelin").value;
+			var lisatieto = document.getElementById("lisatiedot").value;
+			var maara = document.getElementById("maara").value;
+			var pvm = document.getElementById("pvm").value;
+
+
+			// radiobutton
+			var kattaus = "Kattaus: ";
+			var radios = document.getElementsByName("kattaus");
+
+			for (var i = 0, length = radios.length; i < length; i++) {
+				if (radios[i].checked) {
+					kattaus = kattaus + radios[i].value;
+					break;
+				}
+			}
+
+			// checkbox
+			var lisatoiveet = "Lisätoiveet: ";
+			var boksit = document.getElementsByName("toive");
+
+			for (var i = 0, length = boksit.length; i < length; i++) {
+				if (boksit[i].checked) {
+					lisatoiveet = lisatoiveet + boksit[i].value + ", "
+				}
+			}
+
+			// alasvetovalikko
+			var indeksi = document.getElementById("juhla").selectedIndex;
+			var juhla = document.getElementById("juhla").options;
+			var juhlanaihe = "Juhlanaihe: " + juhla[indeksi].text;
+
+
+			// tulostus
+			document.getElementById("tiedot").innerHTML = "<h4>Kiitos varauksestasi! " +
+				"</h4><br><p>Tietosi: " + nimitieto + ", " + spostiosoite + ", " + puhelin +
+				"<br>Ruokailijoiden määrä: " + maara + "<br>Päivämäärä: " + pvm + "<br>" +
+				juhlanaihe + "<br>" + kattaus + "<br>" + lisatoiveet + "<br>Varauksen lisätiedot: " +
+				lisatieto + "</p>";
+		}
+	</script>
+
 </body>
 
 </html>

@@ -130,7 +130,7 @@ body {
     color: #022D5F !important;
 }
 
-/*videot*/
+/* videot */
 #videot {
     width: 100%;
     max-width: 800px;
@@ -157,4 +157,84 @@ body {
 /* taulukko */
 .table {
     max-width: 75%;
+    background-color: #FFFFFF;
+}
+
+/* varauslomake */
+fieldset {
+    width: 100%;
+    border: 2px;
+    border-style: solid; 
+    border-color: #FC7B6D; 
+    padding: 10px;
+    margin: 20px;
+    background-color: #FFFFFF;
+}
+
+fieldset h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+fieldset h4 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+fieldset p {
+    text-align: left;
+    margin-left: 30px;
+}
+
+label {
+   display: block;
+}
+
+label.kuvaus {
+    font-weight: 600;
+    margin: 10px;
+}
+
+::placeholder {
+    color: #8fb1d5;
+    opacity: 1;
+    font-size: small;
+}
+
+input[type=text], input[type=email],input[type=tel], input[type=number],input[type=date] {
+    border-style: solid;
+    border-color: #022D5F;
+    border-width: 1px;
+    width: 100%;
+    margin: 5px 0 5px 0;
+}
+
+select, option {
+    border-style: solid;
+    border-color: #022D5F;
+    border-width: 1px;
+    margin-left: 10px;
+}
+
+input[type=radio], input[type=checkbox], textarea {
+    margin-left: 50px;
+    border-style: solid;
+    border-color: #022D5F;
+    border-width: 1px;
+}
+
+textarea {
+    width: 72%;
+}
+
+input[type=submit] {
+    background-color: #022D5F;
+    color: #FCFAF3;
+    margin: 10px;
+}
+
+input[type=reset] {
+    background-color: #EE4437;
+    color: #FCFAF3;
+    margin: 10px;
 }
